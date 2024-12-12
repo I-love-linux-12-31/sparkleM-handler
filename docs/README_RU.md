@@ -11,6 +11,7 @@
 * `requests`
 * `confluent-kafka`
 * `SQLAlchemy`
+* `PyYAML`
 
 ## Запуск
 ```bash
