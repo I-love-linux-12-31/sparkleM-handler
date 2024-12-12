@@ -89,3 +89,11 @@ services:
     depends_on:
       - zoo1
 ```
+
+## Добавление конфигурации
+1. Воспользуйтесь утилитой gen_config.py 
+```bash
+python3 gen_config.py
+```
+2. Поместите config.tar.xz в папку агента
+3. Перезапустите/запустите агент
