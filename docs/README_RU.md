@@ -42,11 +42,19 @@ python3 main.py
 
 ## Работа с БД
 
+Поддерживаемые базы данных:
+* sqlite3 [по умолчанию]
+* mysql
+* oracle
+* postgresql
+* ...
+
+При использовании других БД, может понадобиться установить доп зависимости для SQLAlchemy 
+(например psycopg2 для postgresql). Подробнее можно прочитать в [документации к SQLAlchemy](https://docs.sqlalchemy.org/en/20/dialects/postgresql.html)
+
 По умолчанию используется база данных sqlite3 (db.sqlite3 в каталоге проекта)
 
-Также можно подключить другие популярные базы данных (mysql, oracle, postgresql):
-
-Параметры БД момент указаны в SparkleM_core.py
+Параметры БД указаны в файле SparkleM_core.py
 ```python
 conn_str = f'sqlite:///{db_file.strip()}?check_same_thread=False'
 ```
