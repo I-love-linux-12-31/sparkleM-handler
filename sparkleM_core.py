@@ -38,7 +38,7 @@ def create_session() -> Session:
 class BaseDataFrame:
     id = sa.Column(sa.UUID, unique=True,
                            primary_key=True, default="00000000-0000-0000-0000-000000000000")
-    added_by = sa.Column(sa.Integer, default=0)
+    config_id = sa.Column(sa.Integer, default=-1)
     date = sa.Column(sa.DateTime, default=datetime.datetime.now())
     hostname = sa.Column(sa.String, nullable=False)
 

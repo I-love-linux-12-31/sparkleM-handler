@@ -90,7 +90,8 @@ def process_message(message):
                     decoded_message['hostname'],
                     decoded_payload['key'],
                     decoded_payload['value'],
-                    session=session
+                    session=session,
+                    config_id=int(decoded_message['config_id'])
                 )
             else:
                 print(F"[\033[31mERR\033[0m] Плагин {decoded_payload['plugin']} не установлен. Невозможно обработать данные!")
