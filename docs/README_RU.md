@@ -44,6 +44,15 @@ python3 main.py
 
 По умолчанию используется база данных sqlite3 (db.sqlite3 в каталоге проекта)
 
+Также можно подключить другие популярные базы данных (mysql, oracle, postgresql):
+
+Параметры БД момент указаны в SparkleM_core.py
+```python
+conn_str = f'sqlite:///{db_file.strip()}?check_same_thread=False'
+```
+Строка должна иметь вид ``dialect[+driver]://user:password@host/dbname[?key=value..]``
+
+
 ## Развёртывание kafka 
 
 В примере указан адрес сервера как 172.16.0.2
